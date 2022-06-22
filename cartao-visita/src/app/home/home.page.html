@@ -1,0 +1,45 @@
+<ion-content>
+
+  <div style="height: 100%;" *ngIf="load">
+    <div class="divCenter" style="height: 100%;">
+      <ion-spinner name="dots" class="spinner"></ion-spinner>
+    </div>
+  </div>
+
+  <div class="homepage"  *ngIf="notLoad">
+    <ion-header>
+      <ion-toolbar class="toolbar-introduction">
+        <ion-title size="large" class="title-white" style="width: 70%;">More about me...</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <div class="divCenter">
+      <div class="avatarDiv">
+        <img class="avatar" src="assets/img/meuAvatar.png"/>
+      </div>
+    </div>
+  
+    <div class="divCenter introduction-myself">
+      <ion-text color="dark">
+        <h2><strong>Hi! I'm Rafa</strong></h2>
+        <h2><strong>Full Stack Developer</strong></h2>
+      </ion-text>
+    </div>
+  
+    <div class="divCenter buttons-myself">
+      <button class="buttonNavBar" (click)="toLinkedin()" style="float: right;"><img style="width: 100%;" src="assets/img/linkedin.png"/></button>
+      <button class="buttonNavBar" (click)="toGithub()" style="float: right;"><img style="width: 100%;" src="assets/img/github.png"/></button>
+      <button class="buttonNavBar" (click)="toTrailhead()" style="float: right;"><img style="width: 100%;" src="assets/img/trailhead.png"/></button>
+    </div>
+  </div>
+
+
+</ion-content>
+
+<ion-footer>
+  <div style="text-align: center;">
+    <ion-text>
+      <p style="color: #7748f0;">Developed with Angular and Ionic</p>
+    </ion-text>
+  </div>
+</ion-footer>
