@@ -1,38 +1,32 @@
 <ion-content>
+  
+  <ion-header>
+    <ion-toolbar class="toolbar-introduction">
+      <h4 style="color: white; margin-left: 2%;">More about me...</h4>
+    </ion-toolbar>
+  </ion-header>
 
-  <div style="height: 100%;" *ngIf="load">
-    <div class="divCenter" style="height: 100%;">
-      <ion-spinner name="dots" class="spinner"></ion-spinner>
+  <div class="divCenter">
+    <div class="avatarDiv">
+      <img class="avatar" src="assets/img/meuAvatar.png"/>
     </div>
   </div>
 
-  <div class="homepage"  *ngIf="notLoad">
-    <ion-header>
-      <ion-toolbar class="toolbar-introduction">
-        <h4 style="color: white; margin-left: 2%;">More about me...</h4>
-      </ion-toolbar>
-    </ion-header>
-  
-    <div class="divCenter">
-      <div class="avatarDiv">
-        <img class="avatar" src="assets/img/meuAvatar.png"/>
-      </div>
-    </div>
-  
-    <div class="divCenter introduction-myself">
-      <ion-text color="dark">
-        <h2 style="color: black;"><strong>Hi! I'm Rafa</strong></h2>
-        <h2 style="color: black;"><strong>Full Stack Developer</strong></h2>
-      </ion-text>
-    </div>
-  
-    <div class="divCenter buttons-myself">
-      <button class="buttonNavBar" (click)="toLinkedin()" style="float: right;"><img style="width: 100%;" src="assets/img/linkedin.png"/></button>
-      <button class="buttonNavBar" (click)="toGithub()" style="float: right;"><img style="width: 100%;" src="assets/img/github.png"/></button>
-      <button class="buttonNavBar" (click)="toTrailhead()" style="float: right;"><img style="width: 100%;" src="assets/img/trailhead.png"/></button>
-    </div>
+  <div class="divCenter introduction-myself">
+    <ion-text color="dark">
+      <h2 style="color: black;"><strong>Hi! I'm Rafa</strong></h2>
+
+      <h2 *ngIf="fullstack" style="color: black;"><strong>Full Stack Developer</strong></h2>
+
+      <h2 *ngIf="salesforce" style="color: black;"><strong>Salesforce Engineer</strong></h2>
+    </ion-text>
   </div>
 
+  <div class="divCenter buttons-myself">
+    <button class="buttonNavBar" (click)="toLinkedin()" style="float: right;"><img style="width: 100%;" src="assets/img/linkedin.png"/></button>
+    <button class="buttonNavBar" (click)="toGithub()" style="float: right;"><img style="width: 100%;" src="assets/img/github.png"/></button>
+    <button class="buttonNavBar" (click)="toTrailhead()" style="float: right;"><img style="width: 100%;" src="assets/img/trailhead.png"/></button>
+  </div>
 
 </ion-content>
 

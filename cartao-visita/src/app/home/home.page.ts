@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  public load = true;
-  public notLoad = false;
+  public fullstack = true;
+  public salesforce = false;
 
   constructor() {}
 
@@ -27,8 +27,28 @@ export class HomePage {
   async ngOnInit() {
     setTimeout(() =>
     {
-      this.load = false;
-      this.notLoad = true;
+      this.showFullstack();
+    },
+    1000);
+  }
+
+  showFullstack(){
+    this.salesforce = false;
+    this.fullstack = true;
+
+    setTimeout(() =>
+    {
+      this.showSalesforce();
+    },
+    1500);
+  }
+
+  showSalesforce(){
+    this.salesforce = true;
+    this.fullstack = false;
+
+    setTimeout(() => {
+      this.showFullstack();
     },
     1500);
   }
