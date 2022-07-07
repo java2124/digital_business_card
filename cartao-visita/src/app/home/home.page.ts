@@ -9,6 +9,7 @@ export class HomePage {
 
   public fullstack = true;
   public salesforce = false;
+  public itau = false;
 
   constructor() {}
 
@@ -35,6 +36,7 @@ export class HomePage {
   showFullstack(){
     this.salesforce = false;
     this.fullstack = true;
+    this.itau = false;
 
     setTimeout(() =>
     {
@@ -46,6 +48,18 @@ export class HomePage {
   showSalesforce(){
     this.salesforce = true;
     this.fullstack = false;
+    this.itau = false;
+
+    setTimeout(() => {
+      this.showItau();
+    },
+    1500);
+  }
+
+  showItau(){
+    this.salesforce = false;
+    this.fullstack = false;
+    this.itau = true;
 
     setTimeout(() => {
       this.showFullstack();

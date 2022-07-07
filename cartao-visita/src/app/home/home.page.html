@@ -7,22 +7,24 @@
   </ion-header>
 
   <div class="divCenter">
-    <div class="avatarDiv">
+    <div class="avatarDiv animation-body">
       <img class="avatar" src="assets/img/meuAvatar.png"/>
     </div>
   </div>
 
-  <div class="divCenter introduction-myself">
+  <div class="divCenter introduction-myself animation-body">
     <ion-text color="dark">
       <h2 style="color: black;"><strong>Hi! I'm Rafa</strong></h2>
 
       <h2 *ngIf="fullstack" style="color: black;"><strong>Full Stack Developer</strong></h2>
 
       <h2 *ngIf="salesforce" style="color: black;"><strong>Salesforce Engineer</strong></h2>
+
+      <h2 *ngIf="itau" style="color: black;"><strong>Work at Itaú Unibanco</strong></h2>
     </ion-text>
   </div>
 
-  <div class="divCenter buttons-myself">
+  <div class="divCenter buttons-myself animation-body">
     <button class="buttonNavBar" (click)="toLinkedin()" style="float: right;"><img style="width: 100%;" src="assets/img/linkedin.png"/></button>
     <button class="buttonNavBar" (click)="toGithub()" style="float: right;"><img style="width: 100%;" src="assets/img/github.png"/></button>
     <button class="buttonNavBar" (click)="toTrailhead()" style="float: right;"><img style="width: 100%;" src="assets/img/trailhead.png"/></button>
@@ -31,7 +33,7 @@
 </ion-content>
 
 <ion-footer style="background-color: white !important;">
-  <div style="text-align: center;">
+  <div class="animation-body" style="text-align: center;">
     <ion-text>
       <p style="color: #7748f0;">Developed with Angular and Ionic</p>
     </ion-text>

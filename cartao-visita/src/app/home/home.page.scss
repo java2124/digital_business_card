@@ -49,7 +49,21 @@ ion-content{
   margin-top: 6%;
 }
 
-.spinner {
-  transform: scale(3);
-  color: #7748f0;
+.animation-body {
+  opacity: 0;
+  animation-name: easedivs;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transform: translateX(-100px);
+  animation-timing-function: ease;
+}
+
+@keyframes easedivs {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
