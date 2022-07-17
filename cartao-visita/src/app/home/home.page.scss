@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-ion-content{
+.background-light {
   --ion-background-color:white !important;
 }
 
-.toolbar-introduction {
+.background-dark {
+  --ion-background-color:black !important;
+}
+
+.toolbar-introduction-light {
   --background: #a580ff;
 }
 
-.title-white {
-  --color: white;
+.toolbar-introduction-dark {
+  --background: #9400d3;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
 }
 
 .avatar {
@@ -23,7 +35,14 @@ ion-content{
   justify-content: center;
   align-items: center;
   margin-top: 10%;
+}
+
+.gradient-light{
   background-image: linear-gradient(#7748f0,#937bd1 ,#a580ff);
+}
+
+.gradient-dark{
+  background-image: linear-gradient(#9400d3, #7748f0,#937bd1);
 }
 
 .divCenter {
@@ -66,4 +85,12 @@ ion-content{
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+.footer-light{
+  background-color: white !important;
+}
+
+.footer-dark{
+  background-color: black !important;
 }

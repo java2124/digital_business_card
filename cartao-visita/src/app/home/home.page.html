@@ -1,38 +1,54 @@
-<ion-content>
+<ion-content [ngClass]="backgroundTheme">
   
   <ion-header>
-    <ion-toolbar class="toolbar-introduction">
-      <h4 style="color: white; margin-left: 2%;">More about me...</h4>
+    <ion-toolbar [ngClass]="toolbarIntroduction">
+        <div style="width: 70%; float: left;">
+          <h4 class="text-white" style="margin-left: 2%;">More about me...</h4>
+        </div>
+        <div style="width: 15%; float: right;">
+          <ion-button fill="clear" *ngIf="dark" (click)="showDark()" >
+            <ion-icon name="moon-outline" style="color: white;" size="large"></ion-icon>
+          </ion-button>
+
+          <ion-button fill="clear" *ngIf="light" (click)="showLight()" >
+            <ion-icon name="sunny-outline" style="color: white;" size="large"></ion-icon>
+          </ion-button>
+        </div>
     </ion-toolbar>
   </ion-header>
 
   <div class="divCenter">
-    <div class="avatarDiv animation-body">
+    <div [ngClass]="avatarStyle">
       <img class="avatar" src="assets/img/meuAvatar.png"/>
     </div>
   </div>
 
   <div class="divCenter introduction-myself animation-body">
     <ion-text color="dark">
-      <h2 style="color: black;"><strong>Hi! I'm Rafa</strong></h2>
+      <h2 [ngClass]="textThemeColor"><strong>Hi! I'm Rafa</strong></h2>
 
-      <h2 *ngIf="fullstack" style="color: black;"><strong>Full Stack Developer</strong></h2>
+      <h2 *ngIf="fullstack" [ngClass]="textThemeColor"><strong>Full Stack Developer</strong></h2>
 
-      <h2 *ngIf="salesforce" style="color: black;"><strong>Salesforce Engineer</strong></h2>
+      <h2 *ngIf="salesforce" [ngClass]="textThemeColor"><strong>Salesforce Engineer</strong></h2>
 
-      <h2 *ngIf="itau" style="color: black;"><strong>Work at Itaú Unibanco</strong></h2>
     </ion-text>
   </div>
 
-  <div class="divCenter buttons-myself animation-body">
+  <div *ngIf="dark" class="divCenter buttons-myself animation-body">
     <button class="buttonNavBar" (click)="toLinkedin()" style="float: right;"><img style="width: 100%;" src="assets/img/linkedin.png"/></button>
     <button class="buttonNavBar" (click)="toGithub()" style="float: right;"><img style="width: 100%;" src="assets/img/github.png"/></button>
     <button class="buttonNavBar" (click)="toTrailhead()" style="float: right;"><img style="width: 100%;" src="assets/img/trailhead.png"/></button>
   </div>
 
+  <div *ngIf="light" class="divCenter buttons-myself animation-body">
+    <button class="buttonNavBar" (click)="toLinkedin()" style="float: right;"><img style="width: 100%;" src="assets/img/linkedindark.png"/></button>
+    <button class="buttonNavBar" (click)="toGithub()" style="float: right;"><img style="width: 100%;" src="assets/img/githubdark.png"/></button>
+    <button class="buttonNavBar" (click)="toTrailhead()" style="float: right;"><img style="width: 100%;" src="assets/img/salesforcedark.png"/></button>
+  </div>
+
 </ion-content>
 
-<ion-footer style="background-color: white !important;">
+<ion-footer [ngClass]="footerColor">
   <div class="animation-body" style="text-align: center;">
     <ion-text>
       <p style="color: #7748f0;">Developed with Angular and Ionic</p>
